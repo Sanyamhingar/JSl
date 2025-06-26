@@ -5,7 +5,7 @@ const tinderuser1 = {}
 //both the above mentioned ways are same to declare an object
 
 tinderuser.id = "122abc"
-tinderuser.Class = "Business"
+tinderuser.class = "Business"
 tinderuser.age = 20
 
 console.log(tinderuser); // this is not a function so we don't use ()
@@ -51,3 +51,5 @@ console.log(tinderuser);
 console.log(Object.keys(tinderuser)); //[ 'id', 'Class', 'age' ]
 console.log(Object.values(tinderuser)); //[ '122abc', 'Business', 20 ]
 console.log(Object.entries(tinderuser));//[ [ 'id', '122abc' ], [ 'Class', 'Business' ], [ 'age', 20 ] ]
+
+console.log(tinderuser.hasOwnproperty('class'));
