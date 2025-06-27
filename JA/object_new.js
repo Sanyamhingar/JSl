@@ -8,7 +8,7 @@ tinderuser.id = "122abc"
 tinderuser.class = "Business"
 tinderuser.age = 20
 
-console.log(tinderuser); // this is not a function so we don't use ()
+//console.log(tinderuser); // this is not a function so we don't use ()
 
 const User = {
      userName: {
@@ -17,7 +17,7 @@ const User = {
     }
 }
 
-// console.log(User.userName?.firstname); // ways to access 
+// console.log(User.userName?.firstname); // ways to access
 // ? is used to check if the requested value does exist or not if not we will have to use if else
 // We can create nested objects
 
@@ -34,22 +34,38 @@ const User = {
 // const num5 = {...Num1, ...Num2}
 // console.log(num5); // using spread operator
 
-const users = [
-    {
-      id : 12,
-      name : "asam"
-    },
-    {
-        id: 15,
-        name: "Sanny"
-    },
+// const users = [
+//     {
+//       id : 12,
+//       name : "asam"
+//     },
+//     {
+//         id: 15,
+//         name: "Sanny"
+//     },
 
-] 
-users[1].id;
-console.log(tinderuser);
+// ]
+// users[1].id;
+// console.log(tinderuser);
 
-console.log(Object.keys(tinderuser)); //[ 'id', 'Class', 'age' ]
-console.log(Object.values(tinderuser)); //[ '122abc', 'Business', 20 ]
-console.log(Object.entries(tinderuser));//[ [ 'id', '122abc' ], [ 'Class', 'Business' ], [ 'age', 20 ] ]
+// console.log(Object.keys(tinderuser)); //[ 'id', 'Class', 'age' ]
+// console.log(Object.values(tinderuser)); //[ '122abc', 'Business', 20 ]
+// console.log(Object.entries(tinderuser));//[ [ 'id', '122abc' ], [ 'Class', 'Business' ], [ 'age', 20 ] ]
 
-console.log(tinderuser.hasOwnproperty('class'));
+// console.log(tinderuser.hasOwnproperty('class'));
+
+
+const course = {
+  coursename: "JS",
+  price : 999,
+  courseid: 12
+}
+
+// course.courseid;
+const {courseid : id} = course
+const {coursename : Cname} = course
+// console.log(id);
+// console.log(Cname);
+
+ 
+
