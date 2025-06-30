@@ -87,7 +87,7 @@ function loginUserMessage1(Username){
     return `${userName} Just LoggedIn`
 }
 
-console.log(loginUserMessage1());
+//console.log(loginUserMessage1());
 
 
 //  function userInput(numb1, numb2){
@@ -98,4 +98,38 @@ console.log(loginUserMessage1());
 //  }
 
 // userInput();
+
+// function calculateCartPrice(...num1){ // here this time we call it rest operator, and define it as our usecase
+//     return num1;
+// }
+
+// console.log(calculateCartPrice(200,300,500)); //O/p: [ 200, 300, 500 ]
+
+// function calculateCartPrice(val1, val2, ...num1){
+//     return num1 
+// }
+
+// console.log((200,400,500,2000))
+
+const user = {
+    userName: "hitesh",
+    prices: 199
+}
+
+function objectHandler(anyObject){
+    console.log(`user name is ${anyObject.userName} and price is ${anyObject.prices}`);
+}
+
+//objectHandler(user);  // case sensitive
+
+const mynewArray = [100,200,300,400]
+
+function returnSecondValue(getarray){
+    return getarray[2]
+}
+
+// console.log(returnSecondValue (mynewArray));
+
+console.log(returnSecondValue([200, 300, 400, 500]));
+
 
