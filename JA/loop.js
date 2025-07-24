@@ -17,24 +17,60 @@
 
 
 // ****map*****
-const map = new Map()
-map.set('in', 'india')
-map.set('fr', 'France')
-map.set('US', 'United States')
+// const map = new Map()
+// map.set('in', 'india')
+// map.set('fr', 'France')
+// map.set('US', 'United States')
 
-//console.log(map);
+// //console.log(map);
 
-for (const [key, value] of map) {
-    console.log(key, ":-", value)
+// for (const [key, value] of map) {
+//     console.log(key, ":-", value)
     
-}
+// }
 
-const myObject = {
-   'game1' : 'NFS',
-   'game2' : 'SANYAM'
-}
+// const myObject = {
+//    'game1' : 'NFS',
+//    'game2' : 'SANYAM'
+// }
 
-for (const [key, value] of myObject) {
-    console.log(key, "-", value);
+// for (const [key, value] of myObject) {
+//     console.log(key, "-", value);
     
-} //TypeError: myObject is not iterable
+// } //TypeError: myObject is not iterable]
+
+
+// for (const key in object) {
+//     if (Object.prototype.hasOwnProperty.call(object, key)) {
+//         const element = object[key];
+        
+//     }
+// } // used for objects
+
+// forEach
+
+const myArray = [1,2,3,4,5,6,7,8,9,10]
+
+// const myNewArray = myArray.filter ( (myArray) => {
+//     return myArray > 4
+
+    
+// });
+
+// console.log(myNewArray);
+
+const myNewArray = []
+
+myArray.forEach( (num) => { 
+    if(num >4){
+        myNewArray.push(num);
+    }
+    
+});
+
+console.log(myNewArray)
+
+
+// let userBooks = books.filter((bk) => bk.genre === 'history');
+// let userBooks = books.filter((bk) => { return bk.genre === 'history'}); // if we are opening curly braces than we need to return the value
+
