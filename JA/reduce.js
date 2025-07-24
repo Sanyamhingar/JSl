@@ -3,15 +3,24 @@
 //const MyNums = myNumbers.map((num) => num+10)
 //console.log(MyNums);
 
-const myNumbers = [1, 2, 3, 4, 5, 6, 7, 8, 9];
+// const myNumbers = [1, 2, 3, 4, 5, 6, 7, 8, 9];
 
-const myNums = [];
+// const myNums = [];
 
-myNumbers.forEach((num) => {
-  if (num > 1) {
-    myNums.push(num + 10);
-  }
-});
+// myNumbers.forEach((num) => {
+//   if (num > 1) {
+//     myNums.push(num + 10);
+//   }
+// });
 
-console.log(myNums);
+// console.log(myNums);
 
+myArray = [1,2,3]
+
+//myNewArray = myArray.reduce((acc,curr) => acc + curr, 0)
+myNewArray = myArray.reduce(function (arr, curr) {
+  console.log(`val of acc is ${arr}, val of curr is ${curr}`)
+    return arr + curr
+})
+
+console.log(myNewArray)
