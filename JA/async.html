@@ -8,8 +8,41 @@
 <body>
     <h1>Sanyam</h1>
     <button id="stop">Stop</button>
+    
 </body>
 <script>
-    setTimeout()
+    // const saySanyam = function(){
+    //     console.log("Sanyam")
+    // }
+ 
+    // const changeText = function(){
+    // document.querySelector('h1').innerText = "SanyamHingar";
+    // }
+    // setTimeout(changeText, 2000)
+
+    // document.querySelector('#stop').addEventListener('click', function(){
+    //     clearTimeout('changeText')
+    //     console.log("Stopped");
+        
+    // })
+
+    const saySanyam = function () {
+        console.log("Sanyam");
+    }
+
+    const heading = document.querySelector('h1');
+    const originalText = heading.innerText; // Save original
+
+    const changeText = function () {
+        heading.innerText = "SanyamHingar";
+    }
+
+    const timer = setTimeout(changeText, 2000); // Store timer ID
+
+    document.querySelector('#stop').addEventListener('click', function () {
+        clearTimeout(timer); // Cancel scheduled change
+        heading.innerText = originalText; // Reset text
+        console.log("Stopped");
+    });
 </script>
 </html>
