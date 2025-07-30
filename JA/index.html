@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="list">
+        <ul class="Event">
+           <li>GOOGLE</li>
+           <li>CHROME</li>
+           <li>FIREFOX</li>
+           <li>EDGE</li>
+        </ul>
+    </div>
+</body>
+
+<script>
+   
+// document.querySelector('.list').addEventListener('click', function(e) {
+    
+//     console.log(e.target.parentNode);
+//     let Remove = e.target.parentNode
+//     Remove.remove()
+// },false);
+
+// document.querySelector('.list').addEventListener('click', function(e) {
+//     if (e.target.tagName === 'LI') {
+//         e.target.remove();
+//     }
+// });
+
+document.querySelector('.Event').addEventListener('click', function(e) {
+    const clickedLi = e.target.closest('li');
+    if (clickedLi && this.contains(clickedLi)) {
+        clickedLi.remove();
+    }
+});
+
+
+    // function newList(listLang) {
+    // const li = document.createElement('li');
+    // li.appendChild(document.createTextNode(listLang));
+    // document.querySelector('.list').appendChild(li)
+    // }
+ 
+    // newList('javascript');
+
+
+
+
+
+
+
+
+
+
+
+
+
+    // function newLang (addLang){
+    //     const li = document.createElement('li')
+    //     li.appendChild(document.createTextNode(addLang))
+    //     document.querySelector('.list').appendChild(li)
+    // }
+    
+    // newLang('Hello'); 
+
+</script>
+</html>
