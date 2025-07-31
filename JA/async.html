@@ -7,7 +7,9 @@
 </head>
 <body>
     <h1>Sanyam</h1>
+    <button id="start">Start</button> 
     <button id="stop">Stop</button>
+
     
 </body>
 <script>
@@ -26,23 +28,74 @@
         
     // })
 
-    const saySanyam = function () {
-        console.log("Sanyam");
-    }
+    // const saySanyam = function () {
+    //     console.log("Sanyam");
+    // }
 
-    const heading = document.querySelector('h1');
-    const originalText = heading.innerText; // Save original
+    // const heading = document.querySelector('h1');
+    // const originalText = heading.innerText; // Save original
 
-    const changeText = function () {
-        heading.innerText = "SanyamHingar";
-    }
+    // const changeText = function () {
+    //     heading.innerText = "SanyamHingar";
+    // }
 
-    const timer = setTimeout(changeText, 2000); // Store timer ID
+    // const timer = setTimeout(changeText, 2000); // Store timer ID
 
-    document.querySelector('#stop').addEventListener('click', function () {
-        clearTimeout(timer); // Cancel scheduled change
-        heading.innerText = originalText; // Reset text
-        console.log("Stopped");
-    });
+    // document.querySelector('#stop').addEventListener('click', function () {
+    //     clearTimeout(timer); // Cancel scheduled change
+    //     heading.innerText = originalText; // Reset text
+    //     console.log("Stopped");
+    // });
+// document.addEventListener("DOMContentLoaded", function () {
+//   let intervalId;
+
+//   const learner = function(str) {
+//     console.log(str, Date.now());
+//   };
+
+//   document.querySelector('#start').addEventListener('click', function () {
+//     if (!intervalId) {
+//       intervalId = setInterval(() => learner("hi"), 1000);
+//     }
+//   });
+
+//   document.querySelector('#stop').addEventListener('click', function () {
+//     clearInterval(intervalId);
+//     intervalId = null;
+//     console.log("Stopped");
+//   });
+// });
+
+   const bgColor = function(){
+      const hexCode = '0123456789ABCDEF';
+      let color = '#'
+      for(let i = 0; i< 6; i++){
+        color += hexCode[Math.floor(Math.random()*16)]
+      }
+      return color;
+   }
+   
+   let intervalId;
+
+   const startBgColor = function(){
+  
+   if(!intervalId){
+        intervalId = setInterval(() => {
+            document.body.style.backgroundColor = bgColor();
+        }, 1000)
+   }
+   }
+
+   const stopBgColor = function(){
+     clearInterval(intervalId);
+     intervalId = null;
+   };
+
+    document.querySelector('#start').addEventListener('click', startBgColor);
+
+    
+    document.querySelector('#stop').addEventListener('click', stopBgColor);
+    
+
 </script>
 </html>
